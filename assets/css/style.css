@@ -40,6 +40,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  text-align: right;
 }
 
 .past {
@@ -57,11 +58,15 @@ textarea {
   color: white;
 }
 
+.blank-activity {
+  background-color: rgba(128, 128, 128, 0.445);
+}
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #06afd5b0;
   color: white;
 }
 
@@ -69,5 +74,12 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.btn {
+  background-color: orange;
+  height: 100%;
+  width: 100%; 
+}
+
 
  
