@@ -72,7 +72,22 @@ function addBlankInput () {
 }
 addBlankInput()
 
+function colorChange (){
+    numberTodayMilitary=12
+    for (var i = 0; i < colorNumbersArray.length; i++){
+        if (numberTodayMilitary === colorNumbersArray[i]) {
+            blankActivityArray[i].style.backgroundColor = "#ff6961";
+            blankInputArray[i].style.color = "white";
+        } else if (numberTodayMilitary < colorNumbersArray[i]) {
+            blankActivityArray[i].style.backgroundColor = "#77dd77";
+            blankInputArray[i].style.color = "white";
+        } else if (numberTodayMilitary > colorNumbersArray[i]) {
+            blankActivityArray[i].style.backgroundColor = "#d3d3d3";
+        }
+    } 
+} 
 
+colorChange()
 
 
 
