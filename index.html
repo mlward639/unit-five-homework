@@ -26,11 +26,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Work Day Scheduler</title>
-    <style>
-      table, th, td {
-        border: 1px solid purple;
-      }
-      </style>
+
   </head>
 
   <body>
@@ -44,8 +40,8 @@
       <table class="table time-block">
         <tbody>
           <tr>
-            <th scope="col" scope="row" class ="time hour" style="width:10%">9 am</th>
-            <td scope="col" class="blank-activity" style="width:80%"></td>
+            <th scope="col" scope="row" class ="time hour" style="width:10%" id = "nineAM">9 am</th>
+            <td scope="col" class="blank-activity-1" style="width:80%"></td>
             <td scope="col" class="saveBtn" style="width:10%">
               <button type="button" class="btn btn-link">    <svg class="btn-pic" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -53,8 +49,8 @@
             </td>   
           </tr>          
           <tr>
-            <th scope="col" scope="row" class ="time hour">10 am</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id = "tenAM">10 am</th>
+            <td scope="col" class="blank-activity-2"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -62,8 +58,8 @@
             </td>   
           </tr>          
           <tr>
-            <th scope="col" scope="row" class ="time hour" >11 am</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="elevenAM">11 am</th>
+            <td scope="col" class="blank-activity-3"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -71,8 +67,8 @@
             </td>   
           </tr>          
           <tr>
-            <th scope="col" scope="row" class ="time hour">12 pm</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="twelvePM">12 pm</th>
+            <td scope="col" class="blank-activity-4"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -80,8 +76,8 @@
             </td>   
           </tr>          
           <tr>
-            <th scope="col" scope="row" class ="time hour">1 pm</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="onePM">1 pm</th>
+            <td scope="col" class="blank-activity-5"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -89,8 +85,8 @@
             </td>   
           </tr>          
           <tr>
-            <th scope="col" scope="row" class ="time hour">2 pm</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="twoPM">2 pm</th>
+            <td scope="col" class="blank-activity-6"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -98,8 +94,8 @@
             </td>   
           </tr>
           <tr>
-            <th scope="col" scope="row" class ="time hour">3 pm</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="threePM">3 pm</th>
+            <td scope="col" class="blank-activity-7"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
@@ -107,16 +103,16 @@
             </td>   
           </tr>
           <tr>
-            <th scope="col" scope="row" class ="time hour">4 pm</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="fourPM">4 pm</th>
+            <td scope="col" class="blank-activity-8"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
               </svg> </button>
             </td>   
           </tr><tr>
-            <th scope="col" scope="row" class ="time hour">5 pm</th>
-            <td scope="col" class="blank-activity"></td>
+            <th scope="col" scope="row" class ="time hour" id="fivePM">5 pm</th>
+            <td scope="col" class="blank-activity-9"></td>
             <td scope="col" class="saveBtn">
               <button type="button" class="btn btn-link">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
                 <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>

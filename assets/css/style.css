@@ -4,14 +4,26 @@ body {
   line-height: 1;
 }
 
-textarea {
+.blank-input {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+.blank-activity {
+  height: 80px;
+  width: 100%;
+  padding: 0;
+  border-left: 1px solid black;
+  background-color:purple
+}
+
 
 .jumbotron {
   text-align: center;
@@ -58,9 +70,6 @@ textarea {
   color: white;
 }
 
-.blank-activity {
-  background-color: rgba(128, 128, 128, 0.445);
-}
 
 .saveBtn {
   border-left: 1px solid black;
@@ -76,7 +85,6 @@ textarea {
 }
 
 .btn {
-  background-color: orange;
   height: 100%;
   width: 100%; 
 }

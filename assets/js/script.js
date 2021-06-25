@@ -1,7 +1,88 @@
-/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+//global variables
+var blankActivity1 = document.querySelector(".blank-activity-1");
+var blankActivity2 = document.querySelector(".blank-activity-2");
+var blankActivity3 = document.querySelector(".blank-activity-3");
+var blankActivity4 = document.querySelector(".blank-activity-4");
+var blankActivity5 = document.querySelector(".blank-activity-5");
+var blankActivity6 = document.querySelector(".blank-activity-6");
+var blankActivity7 = document.querySelector(".blank-activity-7");
+var blankActivity8 = document.querySelector(".blank-activity-8");
+var blankActivity9 = document.querySelector(".blank-activity-9");
+var currentDayDisplay = document.querySelector("#currentDay"); 
+
+var nineAM = document.querySelector("#nineAM");
+var tenAM = document.querySelector("#tenAM");
+var elevenAM = document.querySelector("#elevenAM");
+var twelvePM = document.querySelector("#twelvePM");
+var onePM = document.querySelector("#onePM");
+var twoPM = document.querySelector("#twoPM");
+var threePM = document.querySelector("#threePM");
+var fourPM = document.querySelector("#fourPM");
+var fivePM = document.querySelector("#fivePM");
+
+nineAM = 09;
+tenAM = 10;
+elevenAM = 11;
+twelvePM = 12;
+onePM = 13;
+twoPM = 14;
+threePM = 15;
+fourPM = 16;
+fivePM = 17;
+
+var blankInput1=' ';
+var blankInput2=' ';
+var blankInput3=' ';
+var blankInput4=' ';
+var blankInput5=' ';
+var blankInput6=' ';
+var blankInput7=' ';
+var blankInput8=' ';
+var blankInput9=' ';
+
+var blankInputArray = [blankInput1, blankInput2, blankInput3, blankInput4, blankInput5, blankInput6, blankInput7, blankInput8, blankInput9];
+var blankActivityArray = [blankActivity1, blankActivity2, blankActivity3, blankActivity4, blankActivity5, blankActivity6, blankActivity7, blankActivity8, blankActivity9];
+var colorNumbersArray = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
+
+//add date to header
+
+var today = moment()
+$(currentDayDisplay).text(today.format("dddd, MMM Do, YYYY"));
+var todayMilitary = today.format("kk")
+console.log("mili " + todayMilitary)
 
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
-              <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
-            </svg> 
-            */
+
+//add input so can add text
+function addBlankInput () {
+    for (var i = 0; i < blankActivityArray.length; i++) {
+        blankInputArray[i] = document.createElement("INPUT");
+        blankInputArray[i].setAttribute("type", "text");
+        blankInputArray[i].classList.add("blank-input")
+        blankActivityArray[i].appendChild(blankInputArray[i]);
+    }
+}
+addBlankInput()
+
+function colorChange (){
+    for (var i = 0; i < colorNumbersArray.length; i++){
+        if (today.format("kk") === colorNumbersArray[i]) {
+            blankActivityArray[i].style.backgroundColor = "red";
+        } else if (today.format("kk") < colorNumbersArray[i]) {
+            blankActivityArray[i].style.backgroundColor = "green";
+        } else if (today.format("kk") > colorNumbersArray[i]) {
+            blankActivityArray[i].style.backgroundColor = "black";
+        }
+
+}//end for loop
+}//end function
+
+//colorChange()
+
+/* to do:
+have save button add activities to local storage and call back on page refresh
+change color based on past/present/future
+
+
+
+*/
