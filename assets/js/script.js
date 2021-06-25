@@ -72,8 +72,8 @@ function addBlankInput () {
 }
 addBlankInput()
 
+
 function colorChange (){
-    numberTodayMilitary=12
     for (var i = 0; i < colorNumbersArray.length; i++){
         if (numberTodayMilitary === colorNumbersArray[i]) {
             blankActivityArray[i].style.backgroundColor = "#ff6961";
@@ -93,8 +93,4 @@ colorChange()
 
 /* to do:
 have save button add activities to local storage and call back on page refresh
-change color based on past/present/future
-
-
-
 */
