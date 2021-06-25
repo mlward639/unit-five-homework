@@ -161,15 +161,12 @@ function getSavedInputs() {
     var savedInput3PM = localStorage.getItem("savedInput3PM");
     var savedInput4PM = localStorage.getItem("savedInput4PM");
     var savedInput5PM = localStorage.getItem("savedInput5PM");
-
-
     }
 /*does this work to save time?? 
     for (var i = 0; i < localStorage.length; i++){
         localStorage.getItem(localStorage.key(i));
     } 
     */
-
 getSavedInputs()
 //print getItems back to page
 
