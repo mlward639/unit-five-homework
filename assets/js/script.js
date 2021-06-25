@@ -9,6 +9,7 @@ var blankActivity7 = document.querySelector(".blank-activity-7");
 var blankActivity8 = document.querySelector(".blank-activity-8");
 var blankActivity9 = document.querySelector(".blank-activity-9");
 var currentDayDisplay = document.querySelector("#currentDay"); 
+var tester = document.querySelector(".hour")
 
 var nineAM = document.querySelector("#nineAM");
 var tenAM = document.querySelector("#tenAM");
@@ -40,18 +41,25 @@ var blankInput7=' ';
 var blankInput8=' ';
 var blankInput9=' ';
 
+var rightNow;
+var todayMilitary;
+var numberTodayMilitary;
+
 var blankInputArray = [blankInput1, blankInput2, blankInput3, blankInput4, blankInput5, blankInput6, blankInput7, blankInput8, blankInput9];
 var blankActivityArray = [blankActivity1, blankActivity2, blankActivity3, blankActivity4, blankActivity5, blankActivity6, blankActivity7, blankActivity8, blankActivity9];
 var colorNumbersArray = [nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM];
 
 //add date to header
 
-var today = moment()
-$(currentDayDisplay).text(today.format("dddd, MMM Do, YYYY"));
-var todayMilitary = today.format("kk")
-console.log("mili " + todayMilitary)
-
-
+function displayCurrentTime() {
+    var today = moment()
+    $(currentDayDisplay).text(today.format("dddd, MMM Do, YYYY")); 
+    rightNow = today.format('hh:mm:ss a');
+    todayMilitary = today.format("kk");
+    numberTodayMilitary = parseInt(todayMilitary);
+  }
+displayCurrentTime()
+setInterval(displayCurrentTime, 1000);
 
 //add input so can add text
 function addBlankInput () {
@@ -64,20 +72,9 @@ function addBlankInput () {
 }
 addBlankInput()
 
-function colorChange (){
-    for (var i = 0; i < colorNumbersArray.length; i++){
-        if (today.format("kk") === colorNumbersArray[i]) {
-            blankActivityArray[i].style.backgroundColor = "red";
-        } else if (today.format("kk") < colorNumbersArray[i]) {
-            blankActivityArray[i].style.backgroundColor = "green";
-        } else if (today.format("kk") > colorNumbersArray[i]) {
-            blankActivityArray[i].style.backgroundColor = "black";
-        }
 
-}//end for loop
-}//end function
 
-//colorChange()
+
 
 /* to do:
 have save button add activities to local storage and call back on page refresh
