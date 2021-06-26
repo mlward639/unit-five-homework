@@ -66,7 +66,6 @@ function displayCurrentTime() {
     rightNow = today.format('hh:mm:ss a');
     todayMilitary = today.format("kk");
     numberTodayMilitary = parseInt(todayMilitary);
-    return; //need return??
   }
 displayCurrentTime()
 setInterval(displayCurrentTime, 1000);
@@ -77,7 +76,9 @@ function addBlankInput () {
         blankInputArray[i] = document.createElement("INPUT");
         blankInputArray[i].setAttribute("type", "text");
         blankInputArray[i].classList.add("blank-input")
+        blankInputArray[i].setAttribute("id", "hour"+i );
         blankActivityArray[i].appendChild(blankInputArray[i]);
+        console.log(blankActivityArray[i])
     }
     return; //need return??
 }
@@ -109,12 +110,15 @@ colorChange();
     console.log("first input box: " + blankInput1.value)
     return; //need return??
 } */
-
-//when open page, pull from local storage for last input
-btn1.addEventListener("click", function getSaved(){
-    localStorage.setItem("savedInput9AM", blankInputArray[0].value);
-    console.log("btn 1 worked :  " + blankInputArray[0].value)
+$(document).on("click","button", function(event){
+console.log(this.value)
+localStorage.setItem(this.value, JSON.stringify(this.value));
 })
+//when open page, pull from local storage for last input
+/*btn1.addEventListener("click", function getSaved(){
+    localStorage.setItem("savedInput9AM", JSON.stringify(blankInputArray[0].value));
+    console.log("btn 1 worked :  " + blankInputArray[0].value)
+}) */
 btn2.addEventListener("click", function getSaved(){
     localStorage.setItem("savedInput10AM", blankInputArray[1].value);
     console.log("btn 2 worked :  " + blankInputArray[1].value)
@@ -151,26 +155,12 @@ btn9.addEventListener("click", function getSaved(){
 //also, i think i can delete var blankInput1-9
 
 function getSavedInputs() {
-    var savedInput9AM = localStorage.getItem("savedInput9AM");
-    console.log("saved9am " + savedInput9AM)
-    var savedInput10AM = localStorage.getItem("savedInput10AM");
-    var savedInput11AM = localStorage.getItem("savedInput11AM");
-    var savedInput12PM = localStorage.getItem("savedInput12PM");
-    var savedInput1PM = localStorage.getItem("savedInput1PM");
-    var savedInput2PM = localStorage.getItem("savedInput2PM");
-    var savedInput3PM = localStorage.getItem("savedInput3PM");
-    var savedInput4PM = localStorage.getItem("savedInput4PM");
-    var savedInput5PM = localStorage.getItem("savedInput5PM");
-    }
-/*does this work to save time?? 
-    for (var i = 0; i < localStorage.length; i++){
-        localStorage.getItem(localStorage.key(i));
-    } 
-    */
-getSavedInputs()
-//print getItems back to page
+    //console.log("saved9am " + savedInput9AM)
+    var savedInput10AM = localStorage.getItem("savedInput9AM");
 
+}
 
+document.querySelector("#hour0").value = JSON.parse(localStorage.getItem("savedInput9AM")) || "" ;
 
 
 //if works, try removing btn link to method in html???
