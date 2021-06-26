@@ -1,10 +1,10 @@
-<!--ADD COMMENTS-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- links to stylesheets: bootstrap, jquery, font libraries, reset CSS and style CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -31,9 +31,11 @@
   </head>
 
   <body>
+    <!-- Jumbotron -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!-- Add current date functionality here -->
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
@@ -41,6 +43,7 @@
       <table class="table time-block">
         <tbody>
           <tr>
+            <!-- 3 columns: hour (9A-5P), blank area to input activity, save button -->
             <th scope="col" scope="row" class ="time hour" style="width:10%" id = "nineAM">9 am</th>
             <td scope="col" class="blank-activity-1 blank-activity" style="width:80%"></td>
             <td scope="col" class="saveBtn" style="width:10%"><button type="button" class="btn btn-link btn1" value="nineAM">    <svg class="btn-pic" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
@@ -123,7 +126,7 @@
       </table>
       
     </div>
-
+    <!-- script sources -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  

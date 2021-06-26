@@ -53,9 +53,11 @@ body {
   border-top: 1px dashed #000000;
   text-align: right; 
 }
+
 #nineAM, #tenAM, #elevenAM, #twelvePM, #onePM, #twoPM, #threePM, #fourPM, #fivePM {
   border-top: 1px dashed #000000;
 }
+
 .past {
   background-color: #d3d3d3;
   color: white;
@@ -70,7 +72,6 @@ body {
   background-color: #77dd77;
   color: white;
 }
-
 
 .saveBtn {
   border-left: 1px solid black;

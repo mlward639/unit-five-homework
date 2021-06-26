@@ -66,3 +66,10 @@ document.querySelector("#hour7").value = JSON.parse(localStorage.getItem("this.v
 document.querySelector("#hour8").value = JSON.parse(localStorage.getItem("this.value")) || "";
 
  
+//when click save button, save to local storage
+/* function saveButtonClicked () {
+    localStorage.setItem("savedInputs", JSON.stringify(blankInputArray));
+    console.log("clicked save button, getSaved fxn running")
+    console.log("first input box: " + blankInput1.value)
+    return; //need return??
+} */

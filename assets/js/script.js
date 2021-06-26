@@ -68,7 +68,6 @@ var colorNumbersArray = [
   fourPM,
   fivePM,
 ];
-var hour0;
 
 //add date to header and calculate military time of hour so can compare later for background colors
 function displayCurrentTime() {
@@ -111,14 +110,6 @@ function colorChange() {
   }
 }
 colorChange();
-
-//when click save button, save to local storage
-/* function saveButtonClicked () {
-    localStorage.setItem("savedInputs", JSON.stringify(blankInputArray));
-    console.log("clicked save button, getSaved fxn running")
-    console.log("first input box: " + blankInput1.value)
-    return; //need return??
-} */
 
 //when open page, pull from local storage for last input
 btn1.addEventListener("click", function getSaved(){
@@ -169,8 +160,5 @@ document.querySelector("#hour5").value = JSON.parse(localStorage.getItem("savedI
 document.querySelector("#hour6").value = JSON.parse(localStorage.getItem("savedInput3PM")) || "";
 document.querySelector("#hour7").value = JSON.parse(localStorage.getItem("savedInput4PM")) || "";
 document.querySelector("#hour8").value = JSON.parse(localStorage.getItem("savedInput5PM")) || "";
-
- 
-//if works, try removing btn link to method in html???
 
 

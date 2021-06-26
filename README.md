@@ -5,8 +5,12 @@ Goal of project is to create an hourly calendar application with dynamically upd
 
 ## Screenshots:
 
-Screenshot of deployed application:
-<img src="" alt="Screenshot of deployed application">
+Screenshot of deployed application, blank activity column:
+<img src="assets\images\screenshot-with-blank-activities.png" alt="Screenshot of deployed application">
+
+Screenshot of deployed application, activities saved:
+<img src="assets\images\screenshot-with-example-activities-saved.png" alt="Screenshot of deployed application">
+
 
 ## URLs: 
 
