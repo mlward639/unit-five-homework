@@ -3,6 +3,9 @@
 ## Description: 
 Goal of project is to create an hourly calendar application with dynamically updated HTML and CSS which is powered by jQuery. Moment.js library also utilized for time/date. Features of calendar application include current day displayed, ability to create & save events for each hour during standard business hours, and color coded timeblocks indicating paste/present/future.
 
+## Technologies used: 
+HTML, CSS, Javascript
+
 ## Screenshots:
 
 Screenshot of deployed application, blank activity column:
